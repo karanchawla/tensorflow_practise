@@ -10,7 +10,8 @@ def divide(a,b):
     try:
         return (a/b)
     except ZeroDivisionError as e:
-        raise ValueError('Invalid Inputs') from e```
+        raise ValueError('Invalid Inputs') from e
+```
 
 ### Scope
 4. Closure functions can refer to variables from any of the scopes in which they were defined. 
