@@ -70,9 +70,34 @@ def index_to_words(text):
 results = list(index_to_words(text))
 ```
 
-### Be Defensive when Iterating over arguments
+### Use Enumerate over Range
+14. eg: 
 
+```
+for i, flavor in enumerate(flavor_list):
+	print('%d: %s' %(i+1,flavor))
+```
+15. enumerate provides concise syntax for looping over an iterator and getting the index of each item from the iterator as you go. 
 
+16. You can supply a second parameter to enumerate to specify the number from which to begin counting.(zero is default)
+
+### Use zip to process iterators in parallel
+
+17. eg: 
+
+```
+names = ['Jon', 'Danerys', 'Cersei']
+letters = [len(n) for n in names]
+
+for name, count in zip(names, letters):
+	if count > max_letters:
+	longest_name = name
+	max_letters = count
+```
+
+18. zip built in finctions can be used to iterate over multiple iterators in parallel. 
+19. zip truncates output silently if different size inputs are fed. 
+20. zip_longest from itertools built in module lets you iterate over multplie iterators in parallel regardless of their lengths. 
 
 
 
