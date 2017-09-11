@@ -22,16 +22,16 @@ def divide(a,b):
 9. eg:
 
 ```
-def	sort_priority3(numbers,	group):
-				found	=	False
-				def	helper(x):
-								nonlocal	found
-								if	x	in	group:
-												found	=	True
-												return	(0,	x)
-								return	(1,	x)
-				numbers.sort(key=helper)
-				return	found
+def sort_priority3(numbers, group):
+	found =	False
+	def	helper(x):
+	nonlocal found
+	if x in	group:
+		found =	True
+		return	(0,x)
+	return	(1, x)
+numbers.sort(key=helper)
+return	found
 ```
 Another way of achieving the same thing is to use define a class:
 ```
@@ -98,6 +98,10 @@ for name, count in zip(names, letters):
 18. zip built in finctions can be used to iterate over multiple iterators in parallel. 
 19. zip truncates output silently if different size inputs are fed. 
 20. zip_longest from itertools built in module lets you iterate over multplie iterators in parallel regardless of their lengths. 
+
+21. Avoid else blocks after for and while loops. Python has special syntax that allows else blocks to immediately follow for and while loop interior blocks. 
+22. The else block after a loop only runs if the loop body did not encounter a break statement. 
+23. Avoid using else blocks after loops because their behavior isn't intuitive and can be confusing.  
 
 
 
